@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/home.dart';
 import 'pages/about.dart';
 import 'utils/routes.dart';
+import 'pages/movie_info.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MyRoutes.homeRoute: (context) => Home(),
         MyRoutes.aboutRoute: (context) => About(),
+        MyRoutes.movieInfoRoute: (conext) => MovieInfo(),
       },
     );
   }

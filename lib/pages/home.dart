@@ -59,6 +59,9 @@ class _HomeState extends State<Home> {
         ],
       ),
       drawer: Drawer(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, '/movie_info'),
+      ),
     );
   }
 }

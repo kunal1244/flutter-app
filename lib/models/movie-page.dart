@@ -13,6 +13,10 @@ import 'similar.dart';
 import 'star_list.dart';
 import 'writer_list.dart';
 
+class MovieData {
+  static MoviePage? movies;
+}
+
 class MoviePage {
   final String id;
   final String title;
@@ -230,28 +234,28 @@ class MoviePage {
       plotLocalIsRtl: map['plotLocalIsRtl'] as bool,
       awards: map['awards'] as String,
       directors: map['directors'] as String,
-      directorList: List<DirectorList>.from((map['directorList'] as List<int>).map<DirectorList>((x) => DirectorList.fromMap(x as Map<String,dynamic>),),),
+      directorList: List<DirectorList>.from((map['directorList'] as List<dynamic>).map<DirectorList>((x) => DirectorList.fromMap(x as Map<String,dynamic>),),),
       writers: map['writers'] as String,
-      writerList: List<WriterList>.from((map['writerList'] as List<int>).map<WriterList>((x) => WriterList.fromMap(x as Map<String,dynamic>),),),
+      writerList: List<WriterList>.from((map['writerList'] as List<dynamic>).map<WriterList>((x) => WriterList.fromMap(x as Map<String,dynamic>),),),
       stars: map['stars'] as String,
-      starList: List<StarList>.from((map['starList'] as List<int>).map<StarList>((x) => StarList.fromMap(x as Map<String,dynamic>),),),
-      actorList: List<ActorList>.from((map['actorList'] as List<int>).map<ActorList>((x) => ActorList.fromMap(x as Map<String,dynamic>),),),
+      starList: List<StarList>.from((map['starList'] as List<dynamic>).map<StarList>((x) => StarList.fromMap(x as Map<String,dynamic>),),),
+      actorList: List<ActorList>.from((map['actorList'] as List<dynamic>).map<ActorList>((x) => ActorList.fromMap(x as Map<String,dynamic>),),),
       genres: map['genres'] as String,
-      genreList: List<GenreList>.from((map['genreList'] as List<int>).map<GenreList>((x) => GenreList.fromMap(x as Map<String,dynamic>),),),
+      genreList: List<GenreList>.from((map['genreList'] as List<dynamic>).map<GenreList>((x) => GenreList.fromMap(x as Map<String,dynamic>),),),
       companies: map['companies'] as String,
-      companyList: List<CompanyList>.from((map['companyList'] as List<int>).map<CompanyList>((x) => CompanyList.fromMap(x as Map<String,dynamic>),),),
+      companyList: List<CompanyList>.from((map['companyList'] as List<dynamic>).map<CompanyList>((x) => CompanyList.fromMap(x as Map<String,dynamic>),),),
       countries: map['countries'] as String,
-      countryList: List<CountryList>.from((map['countryList'] as List<int>).map<CountryList>((x) => CountryList.fromMap(x as Map<String,dynamic>),),),
+      countryList: List<CountryList>.from((map['countryList'] as List<dynamic>).map<CountryList>((x) => CountryList.fromMap(x as Map<String,dynamic>),),),
       languages: map['languages'] as String,
-      languageList: List<LanguageList>.from((map['languageList'] as List<int>).map<LanguageList>((x) => LanguageList.fromMap(x as Map<String,dynamic>),),),
+      languageList: List<LanguageList>.from((map['languageList'] as List<dynamic>).map<LanguageList>((x) => LanguageList.fromMap(x as Map<String,dynamic>),),),
       contentRating: map['contentRating'] as String,
       imDbRating: map['imDbRating'] as String,
       imDbRatingVotes: map['imDbRatingVotes'] as String,
       metacriticRating: map['metacriticRating'] as String,
       boxOffice: BoxOffice.fromMap(map['boxOffice'] as Map<String,dynamic>),
       keywords: map['keywords'] as String,
-      keywordList: List<String>.from((map['keywordList'] as List<String>),),
-      similars: List<Similar>.from((map['similars'] as List<int>).map<Similar>((x) => Similar.fromMap(x as Map<String,dynamic>),),),
+      keywordList: List<String>.from((map['keywordList'] as List<dynamic>),),
+      similars: List<Similar>.from((map['similars'] as List<dynamic>).map<Similar>((x) => Similar.fromMap(x as Map<String,dynamic>),),),
     );
   }
 
